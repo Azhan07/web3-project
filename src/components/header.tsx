@@ -15,7 +15,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  const cartValue = useSelector((state: RootState) => state.cart.totalQuantity);
+  const cartValue = useSelector((state: RootState) => state.carts.totalQuantity);
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const shouldBeSticky = scrollPosition > 0;

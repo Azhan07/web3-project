@@ -44,10 +44,10 @@ const Banner = () => {
           </p>
           <Link
             href=""
-            className="bg-gray-950  mt-5 flex gap-2 px-3 py-3 rounded-md h-fit w-fit"
+            className="bg-gray-950  mt-5 flex gap-2 px-3 py-3 rounded-md h-fit w-fit "
           >
             <Image src={cartImg} alt="start shopping" className="w-5" />
-            Start Shopping
+          <p className="text-white">  Start Shopping</p>
           </Link>
           <Brands />
         </div>
@@ -62,7 +62,7 @@ const Banner = () => {
 
 const Brands = () => {
   return (
-    <div className="flex flex-wrap gap-10 lg:gap-2 mt-10 align-middle grayscale ">
+    <div className="flex flex-wrap gap-10 lg:gap-2 mt-10 align-middle grayscale justify-around">
       {BannerBreands.map((res) => {
         return (
           <Image

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { useEffect, useState } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
@@ -36,7 +36,7 @@ const CartProducts = () => {
     }
   };
 
-  const cartProductQty = (type: string, productid: string, index: number) => {
+  const cartsProductQty = (type: string, productid: string, index: number) => {
     const updatedCart = [...cart];
     const currQty = { ...updatedCart[index] };
     if (type === "increament") {
@@ -191,7 +191,7 @@ const CartProducts = () => {
                           <button
                             className="w-8 h-8 rounded-md pt-2 bg-gray-400 flex align-items-center text-white justify-center"
                             onClick={() =>
-                              cartProductQty("decreament", selectProduct.id, i)
+                              cartsProductQty("decreament", selectProduct.id, i)
                             }
                           >
                             <FaMinus />
@@ -200,7 +200,7 @@ const CartProducts = () => {
                           <button
                             className="w-8 h-8 rounded-md pt-2 bg-gray-400 flex align-items-center text-white justify-center"
                             onClick={() =>
-                              cartProductQty("increament", selectProduct.id, i)
+                              cartsProductQty("increament", selectProduct.id, i)
                             }
                           >
                             <FaPlus />

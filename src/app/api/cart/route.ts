@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 import { cookies } from "next/headers";
 import { eq, and, sql } from "drizzle-orm";
 import { client } from "@/lib/sanityClient";
-interface carts {
+interface cart {
     id: string,
     product_id: string,
     user_id: string,
@@ -46,7 +46,7 @@ export const GET = async () => {
                     `
             )
             arr = {
-                cartsId: item.id,
+                cartId: item.id,
                 qty: item.qty,
                 selected_size: item.size,
                 id: res[0]._id,
